@@ -1,6 +1,17 @@
 package com.entities;
 
-public class Salle {
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@Data
+public class Salle{
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long Id;
     private String nom;
     private String capacite;
 
